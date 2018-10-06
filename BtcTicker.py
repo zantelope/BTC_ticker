@@ -16,11 +16,11 @@ class BtcObject(object):
 
 
 
-def foo():
+def getPrice():
   r = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
   test_object = BtcObject(r.json())
   print(test_object.time)
   print(test_object.price)
 
 
-setInterval(foo, 5)
+setInterval(getPrice, 5)
